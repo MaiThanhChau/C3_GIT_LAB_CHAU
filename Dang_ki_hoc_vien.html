@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí học viên</title>
+</head>
+<body>
+    <form action="Dang_ki_hoc_vien.html" method="GET">
+        <table style="width: 100; padding: 15px;">
+            <tr>
+                <td>
+                    <table style="background-color: rgb(247, 218, 138); width: 100;">
+                        <tr>
+                            <th  style="background-color: turquoise"; colspan="2">
+                                <p style="color: blue;">
+                                    ĐĂNG KÍ HỌC VIÊN
+                                </p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="Name" style="color: mediumblue;">Họ và tên</label>
+                            </td>
+                            <td>
+                                <input type="text" name="Name" id="Name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  style="color: mediumblue;">
+                                <label for="BirthDay">Ngày sinh</label>
+                            </td>
+                            <td>
+                                <input type="datetime" name="BirthDay" id="BirthDay">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  style="color: mediumblue;">
+                                <label for="Gioi_tinh">Giới tính</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="Gioi_tinh" id="Gioi_tinh"> <label for="Gioi_tinh">Nam</label>
+                                <input type="radio" name="Gioi_tinh" id="Gioi_tinh1"> <label for="Gioi_tinh1">Nữ</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  style="color: mediumblue; vertical-align: top;">
+                                <label for="Add" >Địa chỉ</label>
+                            </td>
+                            <td>
+                                <textarea name="Add" id="Add" cols="30" rows="4"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="color: mediumblue;">
+                                <label for="Lop">Lớp</label>
+                            </td>
+                            <td>
+                                <select name="Lop" id="Lop">
+                                    <option value="-Chọn lớp-">-Chọn lớp-</option>
+                                    <option value="C03">C03</option>
+                                    <option value="C09">C09</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="color: mediumblue;">
+                                <label for="Mail">Email</label>
+                            </td>
+                            <td>
+                                <input type="email" name="Mail" id="Mail">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="color: mediumblue;">
+                                <label for="DT">Điện thoại</label>
+                            </td>
+                            <td>
+                                <input type="tel" name="DT" id="DT">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" name="Dang_ki" id="Dang_ki" value="Đăng kí">
+                                <input type="reset" name="Nhap_lai" id="Nhap_lai" value="Nhập lại">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
