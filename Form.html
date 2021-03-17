@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+</head>
+<body>
+    <h1>
+        Đăng nhập
+    </h1>
+    <form
+        action="Hello.html"
+        method="GET"
+    >
+        <fieldset>
+            <legend>Thông tin cơ bản</legend>
+            <p>
+                <label
+                for="ho_va_ten"
+                >Họ và tên</label>
+                <input
+                type="text"
+                id="ho_va_ten"
+                name="ho_va_ten"
+                >
+            </p>
+
+            <p>
+                <label
+                for="email"
+                >Email</label>
+                <input
+                type="email"
+                id="email"
+                name="email"
+                >
+            </p>
+
+            <p>
+                <label
+                for="sđt"
+                >Số điện thoại</label>
+                <input
+                type="number"
+                id="sđt"
+                name="sđt"
+                >
+            </p>
+
+            <p>
+                <label
+                for="Mat_khau"
+                >Mật khẩu</label>
+                <input
+                type="password"
+                id="Mat_khau"
+                name="Mat_khau"
+                >
+            </p>
+
+            <p>
+                <label for="">Giới tính</label>
+                <br>
+                Nam <input type="radio"; name="gioi_tinh"; checked="checked">
+                Nữ <input type="radio"; name="gioi_tinh">
+            </p>
+
+            <p>
+                <label for="">Sở thích</label>
+                <br>
+                <label for="da_bong">Đá bóng</label> <input type="checkbox"; name="so_thich"; id="da_bong">
+                <br>
+                <label for="an_nhau">Ăn nhậu</label><input type="checkbox"; name="so_thich"; id="an_nhau">
+                <br>
+                <label for="choi_game">Chơi game</label><input type="checkbox"; name="so_thich"; id="choi_game">
+            </p>
+
+            <p>
+                <label for="gioi_thieu">Giới thiệu</label>
+                <br>
+                <textarea name="gioi_thieu" id="gioi_thieu" cols="30" rows="10"></textarea>
+            </p>
+
+            <p>
+                <label for="">Năm sinh</label>
+                <br>
+                <select name="" id="">
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                </select>
+            </p>
+
+            <!--
+                color
+                date
+                datetime-local
+                email
+                month
+                number
+                range
+                search
+                tel
+                time
+                url
+                week
+            -->
+
+            <p>
+                <label for="">Màu sắc</label>
+                <br>
+                <input type="color">
+            </p>
+
+            <p>
+                <label for="">Ngày nhập học</label>
+                <br>
+                <input type="date">
+            </p>
+            
+            <p>
+                <input type="submit" value="Đăng nhập" />
+                <input type="reset" value="Đặt lại" />
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
