@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Điểm Lý <input type="number" name="" id="diem_ly" value="">
+    Điểm Hóa <input type="number" name="" id="diem_hoa" value="">
+    Điểm Sinh <input type="number" name="" id="diem_sinh" value="">
+    <br>
+    <input type="button" name="" id="TB" value="Điểm TB"> <p id = 'diem_tb'></p>
+    <br>
+    <input type="button" name="" id="diem_tong" value="Điểm Tổng"> <p id = 'tong'></p>
+    <script>
+        let nut_tb = document.getElementById('TB')
+        nut_tb.addEventListener('click', function(){
+            let ly = document.getElementById('diem_ly').value
+            let hoa = document.getElementById('diem_hoa').value
+            let sinh = document.getElementById('diem_sinh').value
+            // ly = parseInt(ly)
+            // hoa = parseInt(hoa)
+            // sinh = parseInt(sinh)
+  
+            let tb = (Number(ly) + Number(hoa) + Number(sinh))/3
+            let trung_binh = document.getElementById('diem_tb')
+            trung_binh.innerText = tb;
+   
+        })
+        let nut_cong = document.getElementById('diem_tong')
+        nut_cong.addEventListener('click', function(){
+            let ly = document.getElementById('diem_ly').value
+            let hoa = document.getElementById('diem_hoa').value
+            let sinh = document.getElementById('diem_sinh').value
+            let tong = Number(ly) + Number(hoa) + Number(sinh)
+            let tong_so = document.getElementById('tong')
+            tong_so.innerText = tong
+        })
+    </script>
+</body>
+</html>

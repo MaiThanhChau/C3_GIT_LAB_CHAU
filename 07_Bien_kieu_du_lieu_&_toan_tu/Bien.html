@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Khai báo biến
+        so_a = 5;
+        // Khai báo biến với VAR
+        var so_b = 9;
+        // Khai báo biến với LET
+        let so_c =5;
+        // Khai báo hằng số
+        const PI = 3.14;
+        // Toán tử
+        // Toán tử số học: + - * / %
+        /*
+        Lớn hơn: >
+        Bé hơn: <
+        Bằng giá trị: ==
+        Bằng giá trị và bằng kiểu dữ liệu: ===
+        Lớn hơn hoặc bằng: >=
+        Bé hơn hoặc bằng: <=
+        */
+        let ket_qua = so_a + so_b
+        let ho_va_ten = 'Châu'; // Kiểu dữ liệu string ( chuỗi )
+        let so_dien_thoai = 0917794111; // Kiểu dữ liệu number ( số )
+        document.write(so_a);
+        document.write('<br>');
+        document.write(so_b);
+        document.write('<br>');
+        document.write(so_c);
+        document.write('<br>');
+        document.write(PI);
+        document.write('<br>');
+        document.write(ho_va_ten);
+        document.write('<br>');
+        document.write(so_dien_thoai);
+        document.write('<br>');
+        document.write(ket_qua);
+        document.write('<br>')
+        let a = 5; // Kiểu dữ liệu số
+        let b = '5'; // Kiểu dữ liệu chữ
+        if (a==b) {
+            document.write('Số a bằng số b')
+        } else {
+            document.write('Số a không bằng số b')
+        }
+        document.write('<br>');
+        if (a===b) {
+            document.write('Số a bằng số b')
+        } else {
+            document.write('Số a không bằng số b')
+        }
+        document.write('<br>');
+        // a==b đúng
+        // a===b sai
+        document.write('Kiểu dữ liệu của a: ' + typeof a);
+        document.write('<br>');
+        document.write('Kiểu dữ liệu của b: ' + typeof b);
+        /* Chuyển đổi kiểu dữ liệu từ chữ sang số
+            - Cách 1
+                b = b + 1
+            - Cách 2
+                b = parseInt( b )
+            - Cách 3
+                b = Number(b)
+        */
+    </script>
+</body>
+</html>

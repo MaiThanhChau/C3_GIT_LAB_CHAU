@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nhập độ C: <input type="number" name="" id="nhiet_do" value="">
+    <br>
+    Chuyển sang độ F: <input type="button" name="" id="chuyen_doi" value="0F"> <p id="ket_qua"></p>
+    <script>
+        let doi = document.getElementById('chuyen_doi');
+        doi.addEventListener('click', function(){
+           let do_c = document.getElementById('nhiet_do').value;
+           let do_F = Number(do_c) * 9 / 5 + 32;
+           let ket_qua = document.getElementById('ket_qua');
+           ket_qua.innerText = do_F;
+        });
+    </script>
+</body>
+</html>
