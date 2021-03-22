@@ -1,0 +1,62 @@
+<!DOCTbPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="a-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 5;
+        let b = '5';
+        let kiem_tra = a === b;
+        let _1 = a == b;
+        let _2 = a === b;
+        /*
+            so sánh VÀ: <điều kiện 1> && <điều kiện 2> && ... && <điều kiện N>
+            so sánh HOẶC: <điều kiện 1> || <điều kiện 2> ...
+            phủ định lại điều kiện: !<điều kiện>
+            cấu trúc câu lệnh if else:
+                <1>if (điều kiện) {
+                        (thực hiện đúng)
+                    } else {
+                        (thực hiện sai)
+                    }
+                <2>(điều kiện) ? (thực hiện đúng) : (thực hiện sai);
+                    [CÓ THỂ KHAI BÁO TRỰC TIẾP]
+                    VD: let a =  (điều kiện) ? (thực hiện đúng) : (thực hiện sai);
+        */
+        if (kiem_tra) {
+            document.writeln("a nhỏ hơn hoặc bằng b");
+        } else {
+            document.writeln("a lớn hơn hoặc bằng b"); 
+        }
+        document.write('<br>')
+        
+        if (_1 && _2) {
+            document.writeln("đúng");
+        } else {
+            document.writeln("sai");
+        }
+        document.write('<br>')
+        
+        if (_1 || _2) {
+            document.writeln("đúng");
+        } else {
+            document.writeln("sai");
+        }
+        document.write('<br>')
+
+        let kq = (_1 || _2) ? 'đúng' : 'sai';
+        document.write(kq);
+        document.write('<br>')
+        let co_may = true;
+        let co_game = true;
+        let choi_buoi_sang = true;
+        let thong_bao_sang = (choi_buoi_sang) ? 'Chơi buổi sáng' : 'Chơi buổi chiều';
+        let thong_bao = (thong_bao_sang) ? thong_bao_sang : 'Không chơi được';
+        document.write(thong_bao);
+    </script>
+</body>
+</html>

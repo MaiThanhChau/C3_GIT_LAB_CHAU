@@ -26,12 +26,12 @@
             <tr>
                 <td><input type="number" name="" id="gia_tri" value=""></td>
                 <td>
-                    <select name="" id="">
+                    <select name="" id="from">
                         <option value="VND" id="">VND</option>
                     </select>
                 </td>
                 <td>
-                    <select name="" id="">
+                    <select name="" id="to">
                         <option value="" id="usd">USD</option>
                     </select>
                 </td>
@@ -39,16 +39,17 @@
             </tr>
         </table>
     </form>
-    <p id="ket_qua"></p>
+    <h1 id="ket_qua"></h1>
     <script>
         let convert = document.getElementById('convert');
         convert.addEventListener('click', function(){
             let giatri = document.getElementById('gia_tri').value;
             let ketqua = Number(giatri) / 23000;
+            //giatri = parseInt(giatri);
             let IN = document.getElementById('ket_qua');
-            IN.innerText = ketqua + ' USD'; 
-            /*alert(ketqua + ' USD');
-            document.write(ketqua + ' USD');*/
+            IN.innerText = Number(giatri) /*thay cho: giatri = parseInt(giatri);*/+ ' VND' + '= ' + ketqua + ' USD'; 
+            alert(Number(giatri) + ' VND' + '= ' + ketqua + ' USD');
+            //document.write(Number(giatri) + ' VND' + '= ' + ketqua + ' USD');
         })
     </script>
 </body>

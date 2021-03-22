@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let gia_tri = prompt("Nhập năm: ");
+        let _1 = Number(gia_tri) % 4 == 0;
+        let _2 = Number(gia_tri) % 100 == 0;
+        let _3 = Number(gia_tri) % 400 == 0;
+        if (_1) {
+            if (_2) {
+                if (_3) {
+                    alert(Number(gia_tri) + ' là năm nhuận');
+                } else {
+                    alert(Number(gia_tri) + ' không phải là năm nhuận');
+                }
+            } else {
+                alert(Number(gia_tri) + ' là năm nhuận');
+            }
+        } else {
+            alert(Number(gia_tri) + ' không phải là năm nhuận');
+        }
+    </script>
+</body>
+</html>
