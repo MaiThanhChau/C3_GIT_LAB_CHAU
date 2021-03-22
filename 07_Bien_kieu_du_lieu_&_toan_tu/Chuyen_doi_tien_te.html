@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th, td{
+            text-align: center;
+            padding: 8px;
+            border-width: 1px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="Chuyen_doi_tien_te.html" method="GET">
+        <table style="width: 100%;">
+            <tr>
+                <th>Amount</th>
+                <th>From Currency</th>
+                <th>To Currency</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td><input type="number" name="" id="gia_tri" value=""></td>
+                <td>
+                    <select name="" id="">
+                        <option value="VND" id="">VND</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="" id="">
+                        <option value="" id="usd">USD</option>
+                    </select>
+                </td>
+                <td><input type="button" name="" id="convert" value="Convert"></td>
+            </tr>
+        </table>
+    </form>
+    <p id="ket_qua"></p>
+    <script>
+        let convert = document.getElementById('convert');
+        convert.addEventListener('click', function(){
+            let giatri = document.getElementById('gia_tri').value;
+            let ketqua = Number(giatri) / 23000;
+            let IN = document.getElementById('ket_qua');
+            IN.innerText = ketqua + ' USD'; 
+            /*alert(ketqua + ' USD');
+            document.write(ketqua + ' USD');*/
+        })
+    </script>
+</body>
+</html>

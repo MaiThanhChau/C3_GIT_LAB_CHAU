@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th, td {
+            padding: 8px;            
+        }
+    </style>
+</head>
+<body>
+    <form action="Ung_dung_may_tinh.html" method="GET">
+        <table style="border-width: 1px; border-collapse: collapse; padding: 8px; ">
+            <tr>
+                <th colspan="4" style="text-align: left; font-size: 40px;">Caculator</th>                
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: left;">
+                    <input type="number" id="so1" value="">
+                </td>
+                <td colspan="2" style="text-align: left;">
+                    <input type="number" id="so2" value="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" id="cong" value="Addition(+)">
+                </td>
+                <td>
+                    <input type="button" id="tru" value="Subtraction(-)">
+                </td>
+                <td>
+                    <input type="button" id="nhan" value="Multiplication(X)">
+                </td>
+                <td>
+                    <input type="button" id="chia" value="Division(/)">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <p id="ket_qua"></p>
+    <script>
+        let nut_cong = document.getElementById('cong');
+        nut_cong.addEventListener('click', function(){
+            let so1 = document.getElementById('so1').value;
+            let so2 = document.getElementById('so2').value;
+            let tong = Number(so1) + Number(so2);
+            let _tong = document.getElementById('ket_qua');
+            _tong.innerHTML = "Tổng là: " + tong;
+        })
+        let nut_tru = document.getElementById('tru');
+        nut_tru.addEventListener('click', function(){
+            let so1 = document.getElementById('so1').value;
+            let so2 = document.getElementById('so2').value;
+            let tru = Number(so1) - Number(so2);
+            let _tru = document.getElementById('ket_qua');
+            _tru.innerHTML = "Hiệu là: " + tru;
+        })
+        let nut_nhan = document.getElementById('nhan');
+        nut_nhan.addEventListener('click', function(){
+            let so1 = document.getElementById('so1').value;
+            let so2 = document.getElementById('so2').value;
+            let nhan = Number(so1) * Number(so2);
+            let _nhan = document.getElementById('ket_qua');
+            _nhan.innerHTML = "Tích là: " + nhan;
+        })
+        let nut_chia = document.getElementById('chia');
+        nut_chia.addEventListener('click', function(){
+            let so1 = document.getElementById('so1').value;
+            let so2 = document.getElementById('so2').value;
+            let chia = Number(so1) / Number(so2);
+            let _chia = document.getElementById('ket_qua');
+            _chia.innerHTML = "Thương là: " + chia;
+        })
+    </script>
+</body>
+</html>
