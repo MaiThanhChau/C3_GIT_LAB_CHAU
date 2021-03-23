@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="tank.png" alt="" id="tank">
+    <p>Click buttion below to move to move image to right</p>
+    <input type="button" name="" id="cc" value="Trái">
+    <input type="button" name="" value="Phải" id="cl">
+    <script>
+        var tank = document.getElementById('tank');
+        tank.style.position = 'relative';
+        tank.style.left = '0px';
+        cl = document.getElementById('cl');
+        cl.addEventListener('click', function(){
+            tank.style.left = parseInt(tank.style.left) + 15 + 'px';
+        })
+        cc = document.getElementById('cc');
+        cc.addEventListener('click', function(){
+            tank.style.left = parseInt(tank.style.left) - 15 + 'px';
+        })
+    </script>
+</body>
+</html>
