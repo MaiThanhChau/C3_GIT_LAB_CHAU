@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let tu_sach = [
+            'Toán', // 0
+            'Văn',  // 1
+            'Sử',   // 2
+            'Địa',  // 3
+            [       // 4
+                'Doreamon', // 0
+                'Tsubasa',  // 1
+                [           // 2
+                    'Bút'   // 0
+                ]
+            ]
+        ];
+        console.log(tu_sach);
+        console.log(tu_sach[4][0]);
+        tu_sach[4][1] = 'Jindo';
+        console.log(tu_sach[4][1]);
+
+        //tạo mảng rỗng
+        let dia_games = [];
+        dia_games[0] = 'Pes2021';
+        dia_games[3] = 'GTA5';
+        dia_games[2] = 'Horizon';
+        dia_games[10] = 'FIFA21';
+        dia_games[7] = 'MK4';
+
+        dia_games[1] = [];
+        dia_games[1][0] = 'Sách';
+        dia_games[1][1] = 'Vở';
+
+        //thay (đặt lại) Toán = dia_games
+        tu_sach[0] = dia_games;
+
+        console.log(tu_sach);
+        console.log(tu_sach[4][2][0]);
+        console.log(dia_games[1]);
+    </script>
+</body>
+
+</html>

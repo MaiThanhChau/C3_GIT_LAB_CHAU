@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let tu_sach = ['Toán', 'Văn', 'Sử', 'Địa'];
+     // vị trí phần tử   0       1      2      3
+        console.log(tu_sach);
+        // xem độ dài của mảng
+        console.log(tu_sach.length);
+        // lấy cuốn sách ở vị trí thứ n (lấy phần tử thứ n)
+        console.log(tu_sach[0]);
+        console.log(tu_sach[3]);
+        // thay (đặt lại) sách sử bằng sách hóa
+        tu_sach[1] = 'Hóa';
+        // lấy cuốn sách hóa
+        console.log(tu_sach[1]);
+        
+        /* mảng 1 chiều là 1 mảng đơn thuần, không chứa các mảng con
+        diễn giải: là 1 cái hộp, không chứa các hộp con */
+
+        // cách tạo mảng 2
+        let dia_games = [];
+        dia_games[0] = 'Pes2021';
+        dia_games[3] = 'GTA5';
+        dia_games[2] = 'Horizon';
+        dia_games[10] = 'FIFA21';
+        dia_games[7] = 'MK4';
+        console.log(dia_games);
+    </script>
+</body>
+</html>

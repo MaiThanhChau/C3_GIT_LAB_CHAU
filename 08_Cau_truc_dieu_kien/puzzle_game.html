@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100%;
+        }
+        td{
+            border-width: 1px;
+            border-style: solid;
+            padding: 1px;
+        }
+    </style>
+</head>
+<body>
+    <table >
+        <tr>
+            <td><img src="puzzlegame/1.jpg" alt="" id="im1"></td>
+        </tr>
+        <tr>
+            <td><img src="puzzlegame/1.jpg" alt="" id="im2"></td>
+        </tr>
+        <tr>
+            <td><img src="puzzlegame/1.jpg" alt="" id="im3"></td>
+        </tr>
+        <tr>
+            <td>  <img src="puzzlegame/1.jpg" alt="" id="im4"> </td>
+        </tr>
+        <tr>
+            <td><img src="puzzlegame/1.jpg" alt="" id="im5"></td>
+        </tr>
+    </table>
+    <script>
+        var im1 = document.getElementById('im1');
+        im1.addEventListener('click', function(){
+            var so_hinh = Math.floor(Math.random() * 15) +1;
+            var ten_hinh = 'puzzlegame/' + so_hinh + '.jpg';
+            im1.src = ten_hinh;
+            //alert('im1');
+        });
+        var im2 = document.getElementById('im2');
+        im2.addEventListener('click', function(){
+            var so_hinh = Math.floor(Math.random() * 15) +1;
+            var ten_hinh = 'puzzlegame/' + so_hinh + '.jpg';
+            im2.src = ten_hinh;
+            //alert('im2');
+        });
+        var im3 = document.getElementById('im3');
+        im3.addEventListener('click', function(){
+            var so_hinh = Math.floor(Math.random() * 15) +1;
+            var ten_hinh = 'puzzlegame/' + so_hinh + '.jpg';
+            im3.src = ten_hinh;
+            //alert('im3');
+        });
+        var im4 = document.getElementById('im4');
+        im4.addEventListener('click', function(){
+            var so_hinh = Math.floor(Math.random() * 15) +1;
+            var ten_hinh = 'puzzlegame/' + so_hinh + '.jpg';
+            im4.src = ten_hinh;
+            //alert('im4');
+        });
+        var im5 = document.getElementById('im5');
+        im5.addEventListener('click', function(){
+            var so_hinh = Math.floor(Math.random() * 15) +1;
+            var ten_hinh = 'puzzlegame/' + so_hinh + '.jpg';
+            im5.src = ten_hinh;
+            //alert('im5');
+        });
+    </script>
+</body>
+</html>
