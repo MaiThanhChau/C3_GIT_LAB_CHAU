@@ -15,7 +15,7 @@
 
         // Cách 1
 
-        // let a = 1;
+        // var a = 1;
         // while (a <= 100) {
         //     if (a == 99) {
         //         alert('Hoàn thành');
@@ -33,7 +33,7 @@
         // alert('Hoàn thành');
 
         // Cách 3
-        // for (let a = 1; a <= 100; a++) {
+        // for (var a = 1; a <= 100; a++) {
         //     if (a == 99) {
         //         alert('Hoàn thành');
         //     }
@@ -42,7 +42,7 @@
         // }
 
         //BÀI 2
-        // let nhiet_do = prompt('Nhập nhiệt độ');
+        // var nhiet_do = prompt('Nhập nhiệt độ');
         // while(nhiet_do > 100) {
         //     alert('Giảm nhiệt độ');
         //     nhiet_do = prompt('Nhập nhiệt độ');
@@ -54,29 +54,29 @@
         // }
 
         //BÀI 3, 4, 5
-        // let a = 1;
-        // let b = 1;
-        // let i = 1;
-        // let chia_het = 0;
-        // let tong = 0;
-        // while (i <= 20) {
-        //     document.write(b + '<br>');
-        //     c = a + b;
-        //     let a = b;
-        //     let b = c;
-        //     i++;
-        //     tong = tong + a;
-        //     if (b % 5 == 0 && chia_het == 0) {
-        //        let chia_het = b;
-        //     }
-        // }
-        // document.write(`Số đầu tiên chia hết cho 5 là ${chia_het} <br>`);
-        // document.write(`Tổng = ${tong}`);
+        var a = 1;
+        var b = 1;
+        var i = 1;
+        var chia_het = 0;
+        var tong = 0;
+        while (i <= 20) {
+            document.write(b + '<br>');
+            c = a + b;
+            var a = b;
+            var b = c;
+            i++;
+            tong = tong + a;
+            if (b % 5 == 0 && chia_het == 0) {
+               var chia_het = b;
+            }
+        }
+        document.write(`Tổng = ${tong} <br>`);
+        document.write(`Số đầu tiên chia hết cho 5 là ${chia_het} <br>`);
 
         //BÀI 6
-        // let i = 1;
-        // let a = 0;
-        // let tong = 0;
+        // var i = 1;
+        // var a = 0;
+        // var tong = 0;
         // while (i <= 30) {
         //     a += 7;
         //     document.write(a + '<br>');
@@ -86,24 +86,24 @@
         // document.write(`Tổng của 30 số chia hết cho 7 đầu tiền là ${tong}`);
 
         // BÀI 7
-        let i = 1;
-        let a = 1;
-        while (i <= 100) {
-            document.write(a + '<br>');
-            i++
-            a = i;
-            if (i % 3 ==0 && i % 5 ==0) {
-                a = 'FizzBuzz';
-            } else {
-                if (i % 5 ==0) {
-                    a = 'Buzz';
-                } else {
-                    if (i % 3 ==0) {
-                        a = 'Fizz';
-                    }
-                }
-            }
-        }
+        // var i = 1;
+        // var a = 1;
+        // while (i <= 100) {
+        //     document.write(a + '<br>');
+        //     i++
+        //     a = i;
+        //     if (i % 3 ==0 && i % 5 ==0) {
+        //         a = 'FizzBuzz';
+        //     } else {
+        //         if (i % 5 ==0) {
+        //             a = 'Buzz';
+        //         } else {
+        //             if (i % 3 ==0) {
+        //                 a = 'Fizz';
+        //             }
+        //         }
+        //     }
+        // }
 
 
 

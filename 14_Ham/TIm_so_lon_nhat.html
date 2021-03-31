@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let number1 = [1, 6, 7, 9, 2, 11, 15, 5];
+        let number2 = [1, 6, 7, 9, 50, 11, 15, 5];
+        let number3 = [1, 6, 70, 9, 2, 11, 15, 5];
+        let number4 = [1, 6, 7, 9, 2, 11, 15, 100000];
+        let number5 = [1, 6, 7, 9, 2, 1564864, 15, 5];
+        function Max(numbers) {
+            let max = numbers[0];
+            for (let i = 0; i < numbers.length; i++) {
+                if (numbers[i] > max) {
+                    max = numbers[i];
+
+                };
+
+            }
+            return max;
+
+        }
+        document.write(Max(number1) + '<br>');
+        document.write(Max(number2) + '<br>');
+        document.write(Max(number3) + '<br>');
+        document.write(Max(number4) + '<br>');
+        document.write(Max(number5) + '<br>');
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mang1 = ['văn', 4, 2, 'toán', 1, 'sử', 'lý'];
+        let mang_so = [];
+        let mang_chu = [];
+        for (let i = 0; i <= mang1.length; i++) {
+            if (typeof mang1[i] == "number") {
+                mang_so.push(mang1[i]);
+            }
+            if (typeof mang1[i] == "string") {
+                mang_chu.push(mang1[i]);
+            }
+            
+        }
+        document.write(mang_so.length + '<br>');
+        document.write(mang_chu.length);
+        console.log(typeof mang1);
+    </script>
+</body>
+</html>

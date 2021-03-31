@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var mang1 = [10,2,3,4,5,6,1,7,8,9];
+        var mang2 = [];
+        var mang3 = [0,1,2,3,-1,-2];
+        function minMang(mang) {
+            if (mang.length == 0) {
+                return -1;
+            }
+            var min = mang[0];
+            for (var i = 1; i < mang.length; i++) {
+                if (mang[i] < min) {
+                    min = mang[i];
+                }                
+            }
+            return min;
+        }
+        var a = minMang(mang3);
+        alert(a);
+    </script>
+</body>
+</html>

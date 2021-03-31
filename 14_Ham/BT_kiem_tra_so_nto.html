@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Nhập số cần kiểm tra: <input type="text" name="" id="nhap" value="">
+    <input type="button" name="" id="kt" value="Kiểm tra">
+    <p id="kq"></p>
+    <script>
+
+        function isPrime(number) {
+            for (let a = 2; a <= number.length; a++) {
+                let count = 0;
+                for (let b = 2; b <= number.length; b++) {
+                    if (number[a] % number[b] == 0) {
+                        count++;
+                    }
+                }
+                if (count == 1) {
+                    // document.write(number[a] + ' là số nguyên tố' + '<br>');
+                    snt.push(a);
+                }
+            }
+        }
+        let number1 = [];
+        for (let i = 0; i <= 100; i++) {
+            number1[i] = i;
+        }
+        let snt = [];
+        isPrime(number1);
+        console.log(snt);
+        let kq = document.getElementById('kq');
+        let kt = document.getElementById('kt');
+        function so_nt(so_nt) {
+            kt.addEventListener('click', function () {
+                let nhap = document.getElementById('nhap').value;
+                for (let j = 0; j <= snt.length; j++) {
+                    if (so_nt[j] == nhap) {
+                        kq.innerHTML = nhap + ' là số nguyên tố';
+                        return so_nt[j];
+                    } else {
+                        kq.innerHTML = nhap + ' không phải là số nguyên tố';
+                    }
+
+                }
+            })
+        }
+        so_nt(snt);
+    </script>
+</body>
+
+</html>
