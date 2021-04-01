@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Nhập Meters: <input type="number" name="" id="met" value="">
+    <input type="button" name="" id="mtof" value="Chuyển sang Feet" onclick="MtF();">
+    <p id="kqmtof"></p>
+    Nhập Feet: <input type="number" name="" id="feet" value="">
+    <input type="button" name="" id="ftom" value="Chuyển sang Meters" onclick="FtM();">
+    <p id="kqftom"></p>
+    <script>
+
+        function feetToMeter(feet) {
+            let meter = 0.305 * feet;
+            return meter;
+        }
+        function meterTofeet(meter) {
+            let feet = 3.279 * meter;
+            return feet;
+        }
+        function MtF() {
+            let met = document.getElementById('met').value;
+            let kq1 = document.getElementById('kqmtof');
+                kq1.innerHTML = ' = ' + feetToMeter(met) + ' feet';
+        }
+        function FtM() {
+            let feet = document.getElementById('feet').value;
+            let kq2 = document.getElementById('kqftom');
+                kq2.innerHTML = ' = ' +  meterTofeet(feet) + ' meter';
+        }
+
+
+    </script>
+</body>
+
+</html>

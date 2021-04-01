@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // BÀI 1
+        // function alertMessage() {
+        //     alert('Xin chao');
+        // }
+        // alertMessage();
+
+
+        // BÀI 2
+        // function bai_2(i) {
+        //     i +=1;
+        //     return i;
+        // }
+        // alert(bai_2(2));
+
+
+        // BÀI 3
+        // function bai_3(a, b) {
+        //     if (a>b) {
+        //         alert('Thong bao');
+        //     }
+        //     if (a<=b) {
+        //         let c = a + b;
+        //         return c;
+        //     }
+        // }
+        // alert(bai_3(3,2));
+
+
+        // BÀI 4
+        // function addNumbers() {
+        //     firstNum = 4;
+        //     secondNum = 8;
+        //     result = firstNum + secondNum;
+        //     return result;
+        // }
+        // result = 0;
+        // alert(result);
+        // result = addNumbers();
+        // alert(result);
+
+
+        // BÀI 5
+        let Star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let Constellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        console.log(Star.length);
+        function bai_5(chuoi) {
+            let tim_thay = '';
+            for (let i = 0; i < Star.length; i++) {
+                if (Star[i] == chuoi) {
+                    tim_thay = Constellation[i];
+                }
+            }
+            if (tim_thay != '') {
+                document.write(tim_thay);
+                
+            } else {
+                document.write('Không tìm thấy');
+            }
+        }
+        let Ngoi_Sao = prompt('Nhập tên ngôi sao muốn tìm kiếm:');
+        bai_5(Ngoi_Sao);
+    </script>
+</body>
+
+</html>

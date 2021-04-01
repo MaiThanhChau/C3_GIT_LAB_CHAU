@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // BÀI 1
+        // function binh_phuong(a) {
+        //     let b = a*a;
+        //     document.write(`Bình phương của ${a} là ${b}`);
+        // }
+        // binh_phuong(18);
+
+
+        // BÀI 2
+        // function hinh_tron(r) {
+        //     let S = r*r*3.14;
+        //     let C = 2*r*3.14;
+        //     document.write(`Diện tích hình tròn có bán kính bằng ${r} là: ${S} <br>`);
+        //     document.write(`Chu vi hình tròn có bán kính bằng ${r} là: ${C}`);
+        // }
+        // let r = prompt('Nhập bán kính hình tròn cần tính');
+        // hinh_tron(r);
+
+
+        // BÀI 3
+        // function tinh_giai_thua(a) {
+        //     let giai_thua = a;
+        //     for (let i = 1; i < a; i++) {
+        //         b = giai_thua * i;
+        //         giai_thua = b;             
+
+        //     }
+        //     document.write(`Giai thừa của ${a} là ${giai_thua}`);
+        // }
+        // tinh_giai_thua(5);
+
+
+        // BÀI 4
+        // function kt_ki_tu(nhap) {
+        //     if (typeof nhap == 'number') {
+        //         document.write('true' + '<br>');
+        //     } else {
+        //         document.write('false' + '<br>');
+        //     }
+        // }
+        // // let ki_tu = prompt('Nhập:');
+        // // kt_ki_tu(ki_tu);
+        // kt_ki_tu(0);
+        // kt_ki_tu('a');
+        // console.log(typeof ki_tu);
+
+
+        // BÀI 5
+        // function min(a, b, c) {
+        //     let min = a;
+        //     if (b < min && b < c) {
+        //         min = b;
+        //     } else {
+        //         if (c < min) {
+        //             min = c;
+        //         }
+        //     }
+        //     return min;
+        // }
+        // document.write(min(2,1,3));
+
+
+        // BÀI 6
+        // function so_duong(so) {
+        //     if (so > 0) {
+        //         document.write(`${so} là số dương`);
+        //     } else {
+        //         if (so < 0) {
+        //         document.write(`${so} là số âm`);
+        //         } else {
+        //         document.write(`${so} là số 0`);
+        //         }
+        //     }
+        // }
+        // so_duong(-9);
+
+
+        // BÀI 7
+        // function doi_cho(a, b) {
+        //     let c = a;
+        //      a = b;
+        //      b = c;
+        //     document.write(a + ' và ' + b);
+        // }
+        // doi_cho(1,2);
+
+
+        // BÀI 8
+        // // function dao_nguoc_mang(mang) {
+        // //     let i = 0;
+        // //     let j = mang.length - 1;
+        // //     while (i < j) {
+        // //         let b = mang[i];
+        // //         mang[i] = mang[j];
+        // //         mang[j] = b;
+        // //         i++;
+        // //         j--
+        // //     }
+        // //     document.write(mang);
+        // // }
+        // function dao_nguoc_mang(mang) {
+        //     document.write(mang.reverse());
+        // }
+        // let a = [1,2,3,4,5];
+        // dao_nguoc_mang(a);
+
+
+        // BÀI 9
+        function bai_9(mang, ki_tu) {
+            var so_lan = 0;
+            for (let i = 0; i < mang.length; i++) {
+                if (mang[i] == ki_tu) {
+                    so_lan += 1;       
+                } else {
+                    let so_lan = -1;
+                }
+                
+            }
+            document.write(`Số lần kí tự ${ki_tu} xuất hiện là ${so_lan}`);
+        }
+        let a = [1,2,3,4,1,2,1,23,1];
+        bai_9(a, 1);
+
+    </script>
+</body>
+
+</html>
