@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="my_canvas" style="background-color: red;"></canvas>
+    <script>
+        this.Rectangle = function (m, n) {
+            this.chieu_dai = m;
+            this.chieu_rong = n;
+            // this.setChieu_dai       = setChieu_dai;
+            // this.setChieu_rong      = setChieu_rong;
+            this.toString = toString;
+            this.getChieu_dai = getChieu_dai;
+            this.getChieu_rong = getChieu_rong;
+            this.getDien_tich = getDien_tich;
+            this.getChu_vi = getChu_vi;
+            this.setRectangle = setRectangle;
+            this.drawRectangle = drawRectangle;
+            var S = this.chieu_dai * this.chieu_rong;
+            var C = 2 * (this.chieu_dai + this.chieu_rong);
+            function getChieu_dai() {
+                return this.chieu_dai;
+            }
+            function getChieu_rong() {
+                return this.chieu_rong;
+            }
+            function getDien_tich() {
+                return S;
+            }
+            function getChu_vi() {
+                return C;
+            }
+            // function setChieu_dai(newChieu_dai) {
+            //     this.chieu_dai = newChieu_dai;
+            //     S = newChieu_dai*this.chieu_rong;
+            //     C = 2*(newChieu_dai+this.chieu_rong);
+            // }
+            // function setChieu_rong(newChieu_rong) {
+            //     this.chieu_rong = newChieu_rong;
+            //     S = this.chieu_dai*newChieu_rong;
+            //     C = 2*(this.chieu_dai+newChieu_rong);
+            // }
+            function setRectangle(newChieu_dai, newChieu_rong) {
+                this.chieu_dai = newChieu_dai;
+                this.chieu_rong = newChieu_rong;
+                S = newChieu_dai * newChieu_rong;
+                C = 2 * (newChieu_dai + newChieu_rong);
+
+            }
+            function toString() {
+                document.write(`Hình chữ nhật có chiều dài là ${this.chieu_dai} và chiều rộng là ${this.chieu_rong} có diện tích là ${S} và chu vi là ${C} <br>`);
+            }
+            function drawRectangle() {
+                var ctx = document.getElementById('my_canvas').getContext('2d');
+                ctx.fillStyle = "yellow";
+                ctx.fillRect(0, 0, this.chieu_dai, this.chieu_rong);
+            }
+
+        }
+        var myRectangle = new Rectangle(100, 50);
+        document.write('<br>');
+        myRectangle.toString();
+        document.write(myRectangle.getDien_tich() + '<br>');
+        document.write(myRectangle.getChu_vi() + '<br>');
+        // myRectangle.setChieu_dai(20);
+        // myRectangle.setChieu_rong(15);
+        document.write(myRectangle.getDien_tich() + '<br>');
+        myRectangle.toString();
+        var myRectangle2 = new Rectangle(100, 50);
+        myRectangle2.toString();
+        // myRectangle2.setChieu_dai(70);
+        myRectangle2.setRectangle(10, 2);
+        myRectangle2.toString();
+        myRectangle2.setRectangle(7, 2);
+        myRectangle2.toString();
+        document.write(myRectangle2.getChu_vi());
+
+        myRectangle.drawRectangle();
+
+
+    </script>
+</body>
+
+</html>

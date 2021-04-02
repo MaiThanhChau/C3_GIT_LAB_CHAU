@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        this.myDate = function (day, month, year) {
+            this.day        = day;
+            this.month      = month;
+            this.year       = year;
+            this.getDay     = getDay;
+            this.getMonth   = getMonth;
+            this.getYear    = getYear;
+            this.setDay     = setDay;
+            this.setMonth   = setMonth;
+            this.setYear    = setYear;
+            this.setDate    = setDate;
+            this.toString   = toString;
+            function getDay() {
+                return this.day;
+            }
+            function getMonth() {
+                return  this.month;
+            }
+            function getYear() {
+                return this.year;
+            }
+            function setDay(newDay) {
+                this.day = newDay;
+            }
+            function setMonth(newMonth) {
+                this.month = newMonth;
+            }
+            function setYear(newYear) {
+                this.year = newYear;
+            }
+            function setDate(newDay, newMonth, newYear) {
+                this.day = newDay;
+                this.month = newMonth;
+                this.year = newYear;
+            }
+            function toString() {
+                document.write(`${this.day}/${this.month}/${this.year} <br>`);
+            }
+
+        }
+        let date = new myDate(29, 5, 1995);
+        date.toString();
+        document.write(date.getDay() + '<br>');
+        document.write(date.getMonth() + '<br>');
+        document.write(date.getYear() + '<br>');
+        date.setDate(1, 2, 2003);
+        date.toString();
+        date.setYear(1994);
+        document.write(date.year + '<br>');
+        date.toString();
+        date.setYear(2000);
+        document.write(date.year);
+    </script>
+</body>
+</html>

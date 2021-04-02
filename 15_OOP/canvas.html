@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="my_canvas" style="width: 500px; height: 500px; background-color: red;"></canvas>
+    <script>
+        let my_canvas = document.getElementById('my_canvas');
+        let ctx = my_canvas.getContext('2d'); // gọi tới phương thức getContext, truyền vào '2d'
+
+        // vẽ đường thẳng
+        ctx.moveTo(0, 0);
+        ctx.lineTo(400, 200);
+        ctx.stroke();
+
+
+        // vẽ đường tròn
+        ctx.beginPath();
+        ctx.arc(125, 125, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        // viết chữ
+        ctx.font = "30px Arial";
+        ctx.fillText("Hello World",10,50);
+    </script>
+</body>
+
+</html>

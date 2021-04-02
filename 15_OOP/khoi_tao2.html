@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Lop_chung_minh() {
+
+
+            // THUỘC TÍNH
+            this.ten_lop = '';
+
+
+            // PHƯƠNG THỨC
+
+            // SET : THIẾT LẬP (thay đổi giá trị)
+
+            // this.dat_ten = function (tham_so_ten_lop) {
+            //     this.ten_lop = tham_so_ten_lop;
+            // }
+
+            this.dat_ten = dat_ten;
+            function dat_ten(tham_so_ten_lop) {
+                this.ten_lop = tham_so_ten_lop;
+            }
+
+            // GET : LẤY GIÁ TRỊ (return)
+            this.lay_ten = function () {
+                return this.ten_lop;
+            }
+        }
+        let obj_Lop_chung_minh = new Lop_chung_minh();
+        document.write(obj_Lop_chung_minh.ten_lop + '<br>');
+        obj_Lop_chung_minh.dat_ten('C03');
+        document.write(obj_Lop_chung_minh.ten_lop + '<br>');
+        document.write(obj_Lop_chung_minh.lay_ten() + '<br>');
+    </script>
+</body>
+</html>

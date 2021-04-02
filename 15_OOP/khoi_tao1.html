@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // KHỞI TẠO ĐỐI TƯỢNG TRỰC TIẾP
+        // var hv1 = {
+        //     ten : 'Châu',
+        //     age : 26,
+        //     sdt : 0987654321,
+        //     tot_nghiep : false
+        // };
+
+        // KHỞI TẠO LỚP BẰNG FUNCTION
+        function Hoc_Vien(ten, age, sdt, tot_nghiep) {
+
+            // THUỘC TÍNH
+            this.name   = ten;
+            this.age    = age;
+            this.phone  = sdt;
+            this.pass   = tot_nghiep;
+
+            // PHƯƠNG THỨC
+            this.gotoSchool = function () {
+                document.write(`Bạn học viên đi học`)
+            }
+            this.report = function () {
+                document.write(`Bạn ${name} làm báo cáo`)
+            }
+            // document.write(`Tên: ${ten} <br>Tuổi: ${age} <br>Số điện thoại: ${sdt} <br>Tốt nghiệp: ${tot_nghiep} `);
+        }
+
+        // KHỞI TẠO ĐỐI TƯỢNG
+        let obj_Hoc_Vien = new Hoc_Vien('Châu', 26, 0987654321, true);
+
+        // TRUY XUẤT THUỘC TÍNH
+        document.write(`Tên học viên là ${obj_Hoc_Vien.name} <br>`);
+        document.write(`Tuổi học viên là ${obj_Hoc_Vien.age} <br>`);
+
+        // TRUY XUẤT PHƯƠNG THỨC
+        obj_Hoc_Vien.gotoSchool();
+        document.write('<br>');
+        obj_Hoc_Vien.report();
+    </script>
+</body>
+</html>
