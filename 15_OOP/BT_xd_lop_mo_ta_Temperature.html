@@ -10,13 +10,11 @@
     <script>
         this.Temperature = function (do_C) {
             this.do_C = do_C;
-            this.CtoF = CtoF;
-            this.CtoK = CtoK;
-            function CtoF() {
+            this.CtoF = function () {
                 var do_F = (9/5)*this.do_C + 32;
                 return do_F;
             }
-            function CtoK() {
+            this.CtoK = function () {
                 var do_K = this.do_C + 273.15;
                 return do_K;
             }

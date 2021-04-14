@@ -12,38 +12,30 @@
             this.day        = day;
             this.month      = month;
             this.year       = year;
-            this.getDay     = getDay;
-            this.getMonth   = getMonth;
-            this.getYear    = getYear;
-            this.setDay     = setDay;
-            this.setMonth   = setMonth;
-            this.setYear    = setYear;
-            this.setDate    = setDate;
-            this.toString   = toString;
-            function getDay() {
+            this.getDay     = function () {
                 return this.day;
             }
-            function getMonth() {
+            this.getMonth   = function () {
                 return  this.month;
             }
-            function getYear() {
+            this.getYear    = function () {
                 return this.year;
             }
-            function setDay(newDay) {
+            this.setDay     = function (newDay) {
                 this.day = newDay;
             }
-            function setMonth(newMonth) {
+            this.setMonth   = function (newMonth) {
                 this.month = newMonth;
             }
-            function setYear(newYear) {
+            this.setYear    = function (newYear) {
                 this.year = newYear;
             }
-            function setDate(newDay, newMonth, newYear) {
+            this.setDate    = function (newDay, newMonth, newYear) {
                 this.day = newDay;
                 this.month = newMonth;
                 this.year = newYear;
             }
-            function toString() {
+            this.toString   = function () {
                 document.write(`${this.day}/${this.month}/${this.year} <br>`);
             }
 

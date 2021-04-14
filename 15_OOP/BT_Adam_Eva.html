@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        this.Apple = function () {
+            this.appleWeight = 10;
+            this.decreaseApple = function () {                
+                if (this.appleWeight > 0) {
+                    this.appleWeight -= 1
+                } else {
+                    return this.appleWeight;
+                }
+            }
+
+        }
+        this.Human = function (name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+            this.takeApple = function (apple) {
+                this.apple = apple;
+            }
+            this.talk = function (text) {
+                var gt;
+                if (this.gender === 'Male') {
+                    gt = 'He talk: ';
+                } else {
+                    gt = 'She talk: ';
+                }
+                document.write(gt + text + '<br>');
+            }
+            this.eatApple = function () {
+                if (this.apple.appleWeight > 0) {
+                    this.weight += 1;
+                    this.apple.decreaseApple();
+                } else {
+                    document.write('Apple is EMPTY!!' + '<br>');
+                }
+            }
+            this.checkAppleWeight = function () {
+                document.write(this.apple.appleWeight + '<br>');
+            }
+            this.checkWeight = function () {
+                document.write(this.name + ': ' + this.weight + ' kg' + '<br>');
+            }
+
+        }
+        var Apple = new Apple();
+        var Adam = new Human('Adam', 'Male', 70);
+        Adam.takeApple(Apple)
+        Adam.eatApple();
+        Adam.checkAppleWeight();
+        Adam.checkWeight();
+        Adam.talk('hihihihihi');
+        var Eva = new Human('Eva', 'Female', 50);
+        Eva.takeApple(Apple);
+        Eva.eatApple();
+        Eva.checkAppleWeight();
+        Eva.checkWeight();
+        Eva.talk('hehehehehe');
+        Adam.eatApple();
+        Adam.checkAppleWeight();
+        Adam.checkWeight();
+        Eva.eatApple();
+        Eva.checkAppleWeight();
+        Eva.checkWeight();
+        Adam.eatApple();
+        Adam.checkAppleWeight();
+        Adam.checkWeight();
+        Eva.eatApple();
+        Eva.checkAppleWeight();
+        Eva.checkWeight();
+        Adam.eatApple();
+        Adam.checkAppleWeight();
+        Adam.checkWeight();
+        Eva.eatApple();
+        Eva.checkAppleWeight();
+        Eva.checkWeight();
+        Adam.eatApple();
+        Adam.checkAppleWeight();
+        Adam.checkWeight();
+        Eva.eatApple();
+        Eva.checkAppleWeight();
+        Eva.checkWeight();
+        Adam.eatApple();
+        Adam.checkAppleWeight();
+        Adam.checkWeight();
+        Eva.eatApple();
+        Eva.checkAppleWeight();
+        Eva.checkWeight();
+    </script>
+</body>
+
+</html>

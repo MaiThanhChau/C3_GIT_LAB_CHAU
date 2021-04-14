@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        this.SwitchButton = function () {
+            this.status = false;
+            // Khai báo phương thức kết nối với đèn:
+            this.connectToLamp = function(lamp) {
+                this.lamp = lamp;
+            }
+            // Khai báo phương thức bật/tắt công tắc:
+            this.switchButton = function() {
+                if (this.status == false) {
+                    this.status = true;
+                    this.lamp.turnOn();
+                } else {
+                    this.status = false;
+                    this.lamp.turnOff();
+                }
+            }
+        }
+        this.ElectricLamp = function () {
+            // Khai báo thuộc tính
+            this.statusLamp = false;
+            // Khai báo phương thức đèn sáng:
+            this.turnOn = function () {
+                this.statusLamp = true;
+                document.write('The lamp is lighting' + '<br>');
+            }
+            // Khai báo phương thức đèn tắt:
+            this.turnOff = function () {
+                this.statusLamp = false;
+                document.write('The lamp is not lighting' + '<br>');
+            }
+        }
+        // Tạo đối tượng đèn:
+        var lamp = new ElectricLamp();
+        // Tạo đối tượng công tắc:
+        var Button = new SwitchButton();
+        // Kết nối đèn với công tắc:
+        Button.connectToLamp(lamp);
+        // Bấm công tắc:
+        Button.switchButton();
+        Button.switchButton();
+        Button.switchButton();
+        Button.switchButton();
+        Button.switchButton();
+        Button.switchButton();
+       
+
+    </script>
+</body>
+
+</html>

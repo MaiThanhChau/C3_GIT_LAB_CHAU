@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .o {
+            border-style: solid;
+            border-color: white;
+            background-color: black;
+            border-width: 1px;
+            text-align: center;
+            color: white;
+        }
+
+        div {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="hidden" name="" id="luot" value="1">
+    <input type="button" name="" id="choi_lai" value="Chơi lại" onclick="">
+    <div style="margin-top: 50px;" id="game">
+    </div>
+    <script>
+        class veBanCo {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+            inHtml() {
+                var top = this.x * 50;
+                var left = this.y * 50;
+                var cell = `<div 
+                                id="o-${this.x}-${this.y}" 
+                                class="o" 
+                                style="top: ${top}px; left: ${left}px" 
+                                onclick='click(${this.x}, ${this.y})' >
+                            </div> `;
+                return cell;
+            }
+            
+
+        }
+        class gameCaro {
+            constructor(hang, cot, id) {
+                this.hang = hang;
+                this.cot = cot;
+                this.id = id;
+                this.cells = [];
+            }
+            
+
+            draw() {
+                document.getElementById(this.id).innerHTML = "";
+                for (var i = 0; i < this.hang; i++) {
+                    var row = [];
+                    this.cells.push(row);
+                    for (var j = 0; j < this.cot; j++) {
+                        var cell = new veBanCo(i, j);
+                        row.push(cell);
+                        document.getElementById(this.id).innerHTML += cell.inHtml();
+                    }
+                }
+            }
+        }
+        var myGame = new gameCaro(10, 10, 'game');
+        myGame.draw();
+        console.log(myGame.cells);        
+        function click(x,y) {
+                var dien = document.getElementById('o'+ '-' + x + '-' + y);
+                var luot = document.getElementById('luot').value;
+                if (luot == 1) {
+                    dien.innerText = 'X';
+                    luot = 2;
+                } else {
+                    dien.innerText = 'O';
+                    luot = 1;
+                }
+            }
+    </script>
+</body>
+
+</html>

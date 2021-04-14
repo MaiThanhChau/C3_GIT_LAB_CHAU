@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        class hinhChuNhat {
+            constructor(dai, rong) {
+                this.dai = dai;
+                this.rong = rong;
+            }
+            //Get phuong thuoc chuViHinhChuNhat = function() {....}
+            chuViHinhChuNhat() {
+                var ketQuaChuVi = 2 * (this.dai + this.rong);
+                document.write(`Chu vi hình chữ nhật là: ${ketQuaChuVi} <br>`);
+            }
+            //Get phuong thuoc
+            tinhDienTich() {
+                var ketQuaDienTich = this.dai * this.rong;
+                document.write(`Diện tích hình chữ nhật là ${ketQuaDienTich} <br>`);
+            }
+            //Set phương thức thay đổi giá trị
+            newHinhChuNhat(newDai, newRong) {
+                this.dai = newDai;
+                this.rong = newRong;
+            }
+        }
+        objHinhChuNhat = new hinhChuNhat(20, 5);
+        objHinhChuNhat.tinhDienTich();
+        objHinhChuNhat.chuViHinhChuNhat();
+        objHinhChuNhat.tinhDienTich();
+        objHinhChuNhat.chuViHinhChuNhat();
+        objHinhChuNhat.newHinhChuNhat(40,5);
+        objHinhChuNhat.tinhDienTich();
+        objHinhChuNhat.chuViHinhChuNhat();
+
+    </script>
+</body>
+
+</html>

@@ -11,8 +11,7 @@
         this.ve_hinh = function () {
             this.gia_tri = '';
             this.text = '';
-            this.tao_hinh = tao_hinh;
-            function tao_hinh(gia_tri, text) {
+            this.tao_hinh = function (gia_tri, text) {
                let bien
                let style = 'text-align: center;';
                style += `width: ${gia_tri[0]};` ;

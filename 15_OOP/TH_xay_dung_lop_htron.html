@@ -10,23 +10,19 @@
     <script>
         this.Circle = function (radius) {
             this.radius = radius;
-            this.getRadius = getRadius;
-            this.getArea = getArea;
-            this.display = display;
-            this.setRadius = setRadius;
             var S = Math.PI*radius*radius;
-            function getRadius() {
+            this.getRadius = function () {
                 return this.radius;
             }
-            function getArea() {
+            this.getArea = function () {
                 return S;
                 // return Math.PI*radius*radius;
             }
-            function setRadius(newRadius) {
+            this.setRadius = function (newRadius) {
                 this.radius = newRadius;
                 S = Math.PI*newRadius*newRadius;
             }
-            function display() {
+            this.display = function () {
                 document.write(`Hình tròn có bán kính ${this.radius} có diện tích là ${S} <br>`);
             }
         }
